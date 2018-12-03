@@ -5,6 +5,7 @@ with open('t67.txt', 'r') as f:
             return list[:-1]
         return list
 
+    d = [validate(line) for line in f.readlines()]
 
     def go(indX=0, indY=0, acc=d[0]):
         for i, a in enumerate(d):
@@ -16,7 +17,6 @@ with open('t67.txt', 'r') as f:
         total.append(acc)
 
 
-    d = [validate(line) for line in f.readlines()]
     total = []
     go()
     print(max([sum(v) for v in total]))
