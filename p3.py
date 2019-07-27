@@ -1,9 +1,12 @@
-n = 600851475143
-i = 2
+def largest_prime(n):
+    i = 2
+    while i * i < n:
+        while n % i == 0:
+            n /= i
+        i += 1
+    return n
 
-while i * i < n:
-    while n % i == 0:
-        n /= i
-    i += 1
+
+n = largest_prime(600851475143)
 
 print(n)
