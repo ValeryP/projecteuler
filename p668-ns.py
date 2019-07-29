@@ -1,15 +1,3 @@
-# def prime_numbers(n):
-#     primes = []
-#     i = 2
-#     while i * i < n:
-#         while n % i == 0:
-#             n /= i
-#             primes.append(i)
-#         i += 1
-#     primes.append(int(n))
-#     return primes
-
-
 def largest_prime(n):
     i = 2
     while i * i < n:
